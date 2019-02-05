@@ -16,7 +16,8 @@ module.exports = function (app) {
             }
         }).catch(function(error){
             console.log(error);
-        }).then(axios.get("http://www.gw2spidy.com/api/v0.9/json/listings/"+req.params.id+"/sell/1")
+        })
+        .then(axios.get("http://www.gw2spidy.com/api/v0.9/json/listings/"+req.params.id+"/sell/1")
         .then(function(response){
             var sellData = response.data.results;
             for(var j=0 ; j < 150 ; j++){
@@ -30,4 +31,4 @@ module.exports = function (app) {
             res.send(historicalData);
         });
     });
-}
+};

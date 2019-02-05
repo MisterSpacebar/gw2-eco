@@ -10,7 +10,8 @@ module.exports = function (app) {
             itemData.push(response.data);
         }).catch(function(error){
             console.log("item data error:\n"+error);
-        }).then(axios.get("https://api.guildwars2.com/v2/commerce/prices/"+req.params.id)
+        })
+        .then(axios.get("https://api.guildwars2.com/v2/commerce/prices/"+req.params.id)
         .then(function(response){
             console.log(response.data);
             itemData.push(response.data);

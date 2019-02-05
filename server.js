@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "production") {
 
 require('./routes/items/item.js')(app);
 require('./routes/items/historical.js')(app);
+require('./routes/items/gems.js')(app);
 
 app.listen(PORT, function() {
     console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
