@@ -19,9 +19,9 @@ module.exports = function (app) {
         }).then(axios.get("http://www.gw2spidy.com/api/v0.9/json/listings/"+req.params.id+"/sell/1")
         .then(function(response){
             var sellData = response.data.results;
-            for(var i=0 ; i < 150 ; i++){
-                historicalData.sold[i] = sellData[i];
-                console.log(sellData[i]);
+            for(var j=0 ; j < 150 ; j++){
+                historicalData.sold[j] = sellData[j];
+                console.log(sellData[j]);
             }
         }).catch(function(error){
             console.log(error);
