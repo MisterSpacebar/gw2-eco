@@ -1,0 +1,9 @@
+USING LODASH
+z = y.map((item)=>item.listing_datetime)
+y = _.uniqBy(z, (Q)=>Q);
+result = [];
+z.forEach((date)=>{
+//console.log(q.filter((item)=>item.listing_datetime === date).sort((item)=>item.unit_price)[0])
+console.log(q.filter((item)=>item.listing_datetime === date))
+	result.push(q.filter((item)=>item.listing_datetime === date)[0])
+})
