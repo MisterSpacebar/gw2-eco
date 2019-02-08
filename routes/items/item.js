@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = function (app) {
-    app.get('/item/:id',function(req,res){
+    app.get('/api/item/:id',function(req,res){
         var itemData = {
             id:0,
             data:{

@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 module.exports = function (app) {
-    app.get('/exchange',function(req,res){
+    app.get('/api/exchange',function(req,res){
         var gemData;
         axios.get("https://api.guildwars2.com/v2/commerce/exchange/gems?quantity=1000")
         .then(function(response){

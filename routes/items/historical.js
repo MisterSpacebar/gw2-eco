@@ -32,7 +32,7 @@ var getHighScores = function(data){
    return sellResult;
 }
 module.exports = function (app) {
-    app.get('/history/:id',function(req,res){
+    app.get('/api/history/:id',function(req,res){
      
 
         var buying = axios.get("http://www.gw2spidy.com/api/v0.9/json/listings/"+req.params.id+"/buy/1")
