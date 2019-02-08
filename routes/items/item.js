@@ -6,9 +6,9 @@ module.exports = function (app) {
             id:0,
             data:{
                 name:"",
+                level:0,
                 description:"",
-                icon:"",
-                level:0
+                icon:""
             },
             pricing:{
                 buy:{
